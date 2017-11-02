@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { createMemoryHistory } from 'history';
-import routes from './routes';
-import configureStore from './store';
+import routes from './routes.js';
+import configureStore from './store.js';
 
 const syncHistoryWithStore = (store, history) => {
   const { routing } = store.getState();

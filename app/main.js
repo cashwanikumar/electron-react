@@ -1,7 +1,7 @@
 import path from 'path';
 import url from 'url';
 import {app, crashReporter, BrowserWindow, Menu} from 'electron';
-// const server = require('./server');
+ const server = require('./server');
 
 const isDevelopment = (process.env.NODE_ENV === 'development');
 
@@ -52,13 +52,13 @@ app.on('ready', async () => {
     show: false 
   });
 
-  // mainWindow.loadURL('http://localhost:5001/');
+  mainWindow.loadURL('http://localhost:5001/');
 
-  mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'index.html'),
-    protocol: 'file:',
-    slashes: true
-  }));
+  //mainWindow.loadURL(url.format({
+  //  pathname: path.join(__dirname, 'index.html'),
+  //  protocol: 'file:',
+  //  slashes: true
+  //}));
 
   // show window once on first load
   mainWindow.webContents.once('did-finish-load', () => {
