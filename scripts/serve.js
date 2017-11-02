@@ -50,3 +50,27 @@ bsync.init({
     .watch('build/**/*')
     .on('change', bsync.reload);
 });
+
+const path = require('path');
+const Sequelize = require('sequelize');
+
+const sequelize = new Sequelize('todo', '', '', {
+  host: 'localhost',
+  dialect: 'sqlite',
+  pool: {
+    max: 5,
+    min: 0,
+    idle: 10000
+  },
+  // SQLite only
+  storage: path.resolve(__dirname) + '/todo.sqlite'
+});
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });

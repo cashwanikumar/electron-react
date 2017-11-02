@@ -1,6 +1,7 @@
 import path from 'path';
 import url from 'url';
 import {app, crashReporter, BrowserWindow, Menu} from 'electron';
+// const server = require('./server');
 
 const isDevelopment = (process.env.NODE_ENV === 'development');
 
@@ -50,6 +51,8 @@ app.on('ready', async () => {
     minHeight: 480,
     show: false 
   });
+
+  // mainWindow.loadURL('http://localhost:5001/');
 
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),

@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-runtime": "^6.22.0",
     "history": "^4.6.3",
+    "mysql2": "^1.4.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
@@ -21,7 +22,9 @@
     "redux": "^3.0.0",
     "redux-actions": "^2.2.1",
     "redux-localstorage": "^0.4.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "sequelize": "^4.20.3",
+    "sqlite3": "^3.1.13"
   },
   "devDependencies": {
     "7zip-bin-linux": "^1.1.0",
@@ -43,7 +46,8 @@
     "eslint-plugin-react": "^7.1.0",
     "npm-run-all": "^4.0.1",
     "redux-mock-store": "^1.2.2",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "sequelize-cli": "^3.0.0"
   },
   "scripts": {
     "postinstall": "electron-builder install-app-deps",
