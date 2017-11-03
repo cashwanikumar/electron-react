@@ -6,6 +6,8 @@ module.exports = {
   devtool: 'cheap-module-eval-source-man',
   noInfo: false,
   entry: [
+    'eventsource-polyfill', // necessary for hot reloading with IE
+    'webpack-hot-middleware/client?reload=true', //note that it reloads the page if hot module reloading fails.
     path.resolve(__dirname, 'build/view/react.js')
   ],
   target: 'web',
@@ -23,7 +25,7 @@ module.exports = {
   ],
   module: {
     loaders: [
-      {test: /\.jsx$/, include: path.join(__dirname, 'app/view'), loaders: ['babel']},
+      {test: /\.js$/, include: path.join(__dirname, 'app/view'), loaders: ['babel']},
       {test: /(\.css)$/, loaders: ['style', 'css']},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'file'},
       {test: /\.(woff|woff2)$/, loader: 'url?prefix=font/&limit=5000'},
