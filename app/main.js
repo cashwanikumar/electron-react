@@ -1,7 +1,7 @@
 import path from 'path';
 import url from 'url';
 import {app, crashReporter, BrowserWindow, Menu} from 'electron';
- const server = require('./server');
+ const server = require('./server/server');
 
 const isDevelopment = (process.env.NODE_ENV === 'development');
 

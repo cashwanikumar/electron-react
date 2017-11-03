@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import reducer from '../../app/reducers/user';
+import reducer from '../../app/server/reducers/user';
 
 describe('reducers', () => {
 
