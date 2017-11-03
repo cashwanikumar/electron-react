@@ -5,9 +5,8 @@ import configureStore from './stores/configureStore.js';
 import { Provider } from 'react-redux';
 import GroceryItemList from './components/GroceryItemList.js';
 import {loadGroceryItems} from './actions/groceryItemsActions.js';
-//import './styles.css';
-//import './../bower_components/skeleton/css/normalize.css';
-//import './../bower_components/skeleton/css/skeleton.css';
+import './styles.css';
+//import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'; // webpack can import CSS files too!
 
 const store = configureStore();
 store.dispatch(loadGroceryItems());
