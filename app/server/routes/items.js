@@ -1,4 +1,5 @@
 import express from 'express';
+const todosController = require('../controllers/todos');
 
 const router = express.Router();
 
@@ -29,5 +30,7 @@ router.post('/items', function(req, res, next) {
     items.push(newItem);
     res.send({status:1, message:'success'});
 });
+
+router.get('/todos', todosController.list);
 
 module.exports = router;

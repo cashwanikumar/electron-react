@@ -21,5 +21,15 @@ module.exports = {
                 error: error
             })
         })
+    },
+    todo:function(url){
+        return new Promise(function(success, error){
+            $.ajax({
+                url: url,
+                type: "GET",
+                success: success,
+                error: error
+            })
+        })
     }
 };

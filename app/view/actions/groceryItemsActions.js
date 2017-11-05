@@ -27,9 +27,15 @@ export function loadGroceryItems() {
 
 export function addItem(newItem) {
     return function(dispatch) {
-        helpers.post("api/items", newItem).then(function(response) {
+        // helpers.post("api/items", newItem).then(function(response) {
+        //     if(response.status) {
+        //         dispatch(addGroceryItemsSuccess(newItem));
+        //     } else {console.log('Sorry');}
+        // })
+        helpers.todo("api/todos", newItem).then(function(response) {
             if(response.status) {
-                dispatch(addGroceryItemsSuccess(newItem));
+                // dispatch(addGroceryItemsSuccess(newItem));
+                console.log(response);
             } else {console.log('Sorry');}
         })
     };
