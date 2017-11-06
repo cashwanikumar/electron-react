@@ -2,7 +2,7 @@ const path = require('path');
 const db_name = 'grocery';
 
 function dbLocation(env) {
-    return path.resolve(__dirname) + '/../database_file/' + db_name + '_' + env + '.sqlite'
+    return path.resolve(__dirname) + '/../../database_file/' + db_name + '_' + env + '.sqlite'
 }
 
 module.exports = {

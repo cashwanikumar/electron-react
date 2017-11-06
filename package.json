@@ -45,6 +45,7 @@
     "babel-preset-stage-0": "^6.1.18",
     "browser-sync": "^2.9.3",
     "chai": "^4.1.0",
+    "copy-webpack-plugin": "^4.2.0",
     "css-loader": "^0.28.7",
     "electron": "^1.6.11",
     "electron-builder": "^19.17.0",
