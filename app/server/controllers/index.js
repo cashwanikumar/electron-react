@@ -1,5 +1,5 @@
-const todos = require('./todos');
+const groceryListController = require('./groceryListController');
 
 module.exports = {
-  todos,
+    groceryListController
 };

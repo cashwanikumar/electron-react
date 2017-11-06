@@ -5,11 +5,9 @@ import config from '../../webpack.config.dev';
 import open from 'open';
 import bodyParser from 'body-parser';
 const index = require('./routes/index');
-const items = require('./routes/items');
-
+const api = require('./routes/api');
 
 /* eslint-disable no-console */
-
 const port = 5001;
 const app = express();
 const compiler = webpack(config);
@@ -29,8 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/', index);
-app.use('/api', items);
-
+app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -38,7 +35,6 @@ app.use(function (req, res, next) {
     err.status = 404;
     next(err);
 });
-
 
 app.listen(port, function (err) {
     if (err) {
